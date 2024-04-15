@@ -1,13 +1,11 @@
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
+import { DiAndroid } from 'react-icons/di';
 
 export default function InstaLogo() {
   return (
-    <div
-      className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
-    >
-      <GlobeAltIcon className="h-12 w-12 rotate-[15deg]" />
-      <p className="text-[44px]">Acme</p>
+    <div className="flex items-center text-white text-lg font-bold">
+      <DiAndroid className="w-8 h-8 mr-2" />
+      <span>Instagram Analysis</span>
     </div>
   );
 }

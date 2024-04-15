@@ -1,29 +1,20 @@
-
 import Link from 'next/link';
-import NavLinks from './nav-links';
 import InstaLogo from '../instalogo';
-import { PowerIcon } from '@heroicons/react/24/outline';
- 
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2">
-      <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
-        href="/"
-      >
-        <div className="w-32 text-white md:w-40">
-          <InstaLogo />
-        </div>
-      </Link>
-      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
-          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-            <PowerIcon className="w-6" />
-            <div className="hidden md:block">Sign Out</div>
-          </button>
+    <div className="bg-gray-900 text-white h-full w-64 flex flex-col">
+      <div className="flex items-center justify-center h-16">
+        <InstaLogo />
       </div>
+      <nav className="flex-1">
+        <Link href="/dashboard/imp_analysis">
+          <div className="px-4 py-2 block hover:bg-gray-800">IMPRESSION</div>
+        </Link>
+        <Link href="/dashboard/tag_analysis">
+          <div className="px-4 py-2 block hover:bg-gray-800">TAG</div>
+        </Link>
+      </nav>
     </div>
   );
 }

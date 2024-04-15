@@ -5,11 +5,10 @@ import { Suspense } from "react";
 export default function Page() {
   return (
     <main>
-  <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+  <h1 className={`${lusitana.className} mb-4 text-xl md:text-3xl`}>
     Dashboard
   </h1>
     <div>
-    <p>Dashboard Page</p>
     <div>
     <Link href="/dashboard/imp_analysis">GO imp</Link>
     </div>
